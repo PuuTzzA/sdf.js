@@ -289,7 +289,7 @@ Surface opSmoothUnion(Surface a, Surface b, float smoothness) {
 }
 
 float opSmoothSubtraction(float a, float b, float smoothness) {
-    return smin(-a, b, smoothness).x;
+    return -smin(-a, b, smoothness).x;
 }
 
 Surface opSmoothSubtraction(Surface a, Surface b, float smoothness) {
@@ -310,7 +310,7 @@ Surface opSmoothSubtraction(Surface a, Surface b, float smoothness) {
 }
 
 float opSmoothIntersection(float a, float b, float smoothness) {
-    return smin(-a, -b, smoothness).x;
+    return -smin(-a, -b, smoothness).x;
 }
 
 Surface opSmoothIntersection(Surface a, Surface b, float smoothness) {
